@@ -7,7 +7,7 @@ const BlockHeight: React.FC = () => {
   useEffect(() => {
     const fetchBlockHeights = async () => {
       try {
-        const response = await fetch('http://backend-endpoint/block-heights', {
+        const response = await fetch('http://localhost:5000/api/block-heights', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -21,7 +21,7 @@ const BlockHeight: React.FC = () => {
           throw new Error('Network response was not ok');
         }
 
-        const data = await response.json();
+        const data: number[] = await response.json();
         setBlockHeights(data);
       } catch (error) {
         console.error('Error fetching block heights:', error);
