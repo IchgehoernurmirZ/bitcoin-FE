@@ -7,7 +7,7 @@ const BlockHeight: React.FC = () => {
   useEffect(() => {
     const fetchBlockHeights = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/block-heights', {
+        const response = await fetch('http://localhost:5000/api/get_data', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
