@@ -16,7 +16,7 @@ const BlockInfo: React.FC = () => {
   useEffect(() => {
     const fetchBlockInfos = async () => {
       try {
-        const response = await fetch('http://43.153.58.6:5000/api/get_data', {
+        const response = await fetch('https://43.153.58.6:5000/api/get_data', {
           method: 'Get',
           headers: {
             'Content-Type': 'application/json',
